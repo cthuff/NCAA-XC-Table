@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		442436A31F4BE9FE001D2EF5 /* Old-Results in Resources */ = {isa = PBXBuildFile; fileRef = 442436A21F4BE9FE001D2EF5 /* Old-Results */; };
 		4449B5D41F4BE2E000DAB0D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5D31F4BE2E000DAB0D1 /* AppDelegate.swift */; };
 		4449B5D61F4BE2E000DAB0D1 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */; };
 		4449B5D81F4BE2E000DAB0D1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5D71F4BE2E000DAB0D1 /* DetailViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		442436A21F4BE9FE001D2EF5 /* Old-Results */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Old-Results"; sourceTree = "<group>"; };
 		4449B5D01F4BE2E000DAB0D1 /* NCAA-XC-Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NCAA-XC-Table.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4449B5D31F4BE2E000DAB0D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				4449B5E91F4BE2E100DAB0D1 /* NCAA-XC-TableTests */,
 				4449B5F41F4BE2E100DAB0D1 /* NCAA-XC-TableUITests */,
 				4449B5D11F4BE2E000DAB0D1 /* Products */,
+				442436A21F4BE9FE001D2EF5 /* Old-Results */,
 			);
 			sourceTree = "<group>";
 		};
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4449B5E01F4BE2E000DAB0D1 /* LaunchScreen.storyboard in Resources */,
+				442436A31F4BE9FE001D2EF5 /* Old-Results in Resources */,
 				4449B5DD1F4BE2E000DAB0D1 /* Assets.xcassets in Resources */,
 				4449B5DB1F4BE2E000DAB0D1 /* Main.storyboard in Resources */,
 			);
@@ -518,6 +522,7 @@
 				4449B5FC1F4BE2E100DAB0D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4449B5FD1F4BE2E100DAB0D1 /* Build configuration list for PBXNativeTarget "NCAA-XC-TableTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +531,7 @@
 				4449B5FF1F4BE2E100DAB0D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4449B6001F4BE2E100DAB0D1 /* Build configuration list for PBXNativeTarget "NCAA-XC-TableUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +540,7 @@
 				4449B6021F4BE2E100DAB0D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
