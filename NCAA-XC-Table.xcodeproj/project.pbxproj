@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440B9C741F4D393200515600 /* DataAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440B9C731F4D393200515600 /* DataAccessor.swift */; };
+		440B9C761F4D483500515600 /* 5kNCAA 1st Round.csv in Resources */ = {isa = PBXBuildFile; fileRef = 440B9C751F4D483500515600 /* 5kNCAA 1st Round.csv */; };
 		442436A31F4BE9FE001D2EF5 /* Old-Results in Resources */ = {isa = PBXBuildFile; fileRef = 442436A21F4BE9FE001D2EF5 /* Old-Results */; };
 		4449B5D41F4BE2E000DAB0D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5D31F4BE2E000DAB0D1 /* AppDelegate.swift */; };
 		4449B5D61F4BE2E000DAB0D1 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		440B9C731F4D393200515600 /* DataAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccessor.swift; sourceTree = "<group>"; };
+		440B9C751F4D483500515600 /* 5kNCAA 1st Round.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "5kNCAA 1st Round.csv"; sourceTree = "<group>"; };
 		442436A21F4BE9FE001D2EF5 /* Old-Results */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Old-Results"; sourceTree = "<group>"; };
 		4449B5D01F4BE2E000DAB0D1 /* NCAA-XC-Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NCAA-XC-Table.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4449B5D31F4BE2E000DAB0D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,8 +107,10 @@
 			isa = PBXGroup;
 			children = (
 				4449B5D31F4BE2E000DAB0D1 /* AppDelegate.swift */,
+				440B9C751F4D483500515600 /* 5kNCAA 1st Round.csv */,
 				4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */,
 				4449B5D71F4BE2E000DAB0D1 /* DetailViewController.swift */,
+				440B9C731F4D393200515600 /* DataAccessor.swift */,
 				4449B5D91F4BE2E000DAB0D1 /* Main.storyboard */,
 				4449B5DC1F4BE2E000DAB0D1 /* Assets.xcassets */,
 				4449B5DE1F4BE2E000DAB0D1 /* LaunchScreen.storyboard */,
@@ -241,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				440B9C761F4D483500515600 /* 5kNCAA 1st Round.csv in Resources */,
 				4449B5E01F4BE2E000DAB0D1 /* LaunchScreen.storyboard in Resources */,
 				442436A31F4BE9FE001D2EF5 /* Old-Results in Resources */,
 				4449B5DD1F4BE2E000DAB0D1 /* Assets.xcassets in Resources */,
@@ -271,6 +278,7 @@
 			files = (
 				4449B5D81F4BE2E000DAB0D1 /* DetailViewController.swift in Sources */,
 				4449B5D61F4BE2E000DAB0D1 /* MasterViewController.swift in Sources */,
+				440B9C741F4D393200515600 /* DataAccessor.swift in Sources */,
 				4449B5D41F4BE2E000DAB0D1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
