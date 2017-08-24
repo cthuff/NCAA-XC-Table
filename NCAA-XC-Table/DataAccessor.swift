@@ -8,26 +8,16 @@
 
 import Foundation
 
-var d1_west_1500Times = [Int: String]()
-var d1_west_5kTimes = [Int: String]()
-var d1_west_steepleTimes = [Int: String]()
-var d1_West_10kTimes = [Int: String]()
+var d1_west_1500Times = [String]()
+var d1_west_5kTimes = [String]()
+var d1_west_steepleTimes = [String]()
+var d1_west_10kTimes = [String]()
 
 var array = [String]()
 
 class DataAccessor {
 
-    func test()
-    {
-        var x: Int = 0;
-        while array.count < 96{
-            array.append("[\(x)] =")
-            x = x + 1
-        }
-        
-        for items in array
-        {
-            print(items)
-        }
-    }
+    //MARK: - Parse
+   
 }
+

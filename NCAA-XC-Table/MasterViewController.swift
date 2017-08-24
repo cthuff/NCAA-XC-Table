@@ -16,6 +16,14 @@ class MasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        load()
+        if( d1_west_5kTimes.isEmpty){
+           let test = Setup.init()
+           d1_west_5kTimes = test.init5k()
+            save()
+        }
+        print(d1_west_5kTimes)
+        
         // Do any additional setup after loading the view, typically from a nib.
         navigationItem.leftBarButtonItem = editButtonItem
 
@@ -89,6 +97,28 @@ class MasterViewController: UITableViewController {
         }
     }
 
+    func save() {
+        UserDefaults.standard.set(d1_west_1500Times, forKey: d1_1500_Key)
+        UserDefaults.standard.set(d1_west_steepleTimes, forKey: d1_steeple_Key)
+        UserDefaults.standard.set(d1_west_5kTimes, forKey: d1_5k_Key)
+        UserDefaults.standard.set(d1_west_10kTimes, forKey: d1_10k_Key)
+        UserDefaults.standard.synchronize()
+    }
+    
+    func load(){
+        if let loadedData = UserDefaults.standard.array(forKey: d1_1500_Key) as? [String] {
+            d1_west_1500Times = loadedData
+        }
+        if let loadedData = UserDefaults.standard.array(forKey: d1_steeple_Key) as? [String] {
+            d1_west_steepleTimes = loadedData
+        }
+        if let loadedData = UserDefaults.standard.array(forKey: d1_5k_Key) as? [String] {
+            d1_west_5kTimes = loadedData
+        }
+        if let loadedData = UserDefaults.standard.array(forKey: d1_10k_Key) as? [String] {
+            d1_west_10kTimes = loadedData
+        }
+    }
 
 }
 
