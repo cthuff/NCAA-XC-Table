@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		440509451F4E819000518015 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440509441F4E819000518015 /* Setup.swift */; };
+		440509471F4E97B700518015 /* SteepleFirstRound.csv in Resources */ = {isa = PBXBuildFile; fileRef = 440509461F4E97B700518015 /* SteepleFirstRound.csv */; };
+		440509491F4E97E800518015 /* 10kFirstRound.csv in Resources */ = {isa = PBXBuildFile; fileRef = 440509481F4E97E800518015 /* 10kFirstRound.csv */; };
+		4405094B1F4E97F200518015 /* 1500FirstRound.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4405094A1F4E97F200518015 /* 1500FirstRound.csv */; };
 		440B9C741F4D393200515600 /* DataAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440B9C731F4D393200515600 /* DataAccessor.swift */; };
 		440B9C761F4D483500515600 /* 5kFirstRound.csv in Resources */ = {isa = PBXBuildFile; fileRef = 440B9C751F4D483500515600 /* 5kFirstRound.csv */; };
 		442436A31F4BE9FE001D2EF5 /* Old-Results in Resources */ = {isa = PBXBuildFile; fileRef = 442436A21F4BE9FE001D2EF5 /* Old-Results */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		440509441F4E819000518015 /* Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
+		440509461F4E97B700518015 /* SteepleFirstRound.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SteepleFirstRound.csv; sourceTree = "<group>"; };
+		440509481F4E97E800518015 /* 10kFirstRound.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 10kFirstRound.csv; sourceTree = "<group>"; };
+		4405094A1F4E97F200518015 /* 1500FirstRound.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 1500FirstRound.csv; sourceTree = "<group>"; };
 		440B9C731F4D393200515600 /* DataAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccessor.swift; sourceTree = "<group>"; };
 		440B9C751F4D483500515600 /* 5kFirstRound.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 5kFirstRound.csv; sourceTree = "<group>"; };
 		442436A21F4BE9FE001D2EF5 /* Old-Results */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Old-Results"; sourceTree = "<group>"; };
@@ -109,7 +115,10 @@
 			isa = PBXGroup;
 			children = (
 				4449B5D31F4BE2E000DAB0D1 /* AppDelegate.swift */,
+				4405094A1F4E97F200518015 /* 1500FirstRound.csv */,
 				440B9C751F4D483500515600 /* 5kFirstRound.csv */,
+				440509461F4E97B700518015 /* SteepleFirstRound.csv */,
+				440509481F4E97E800518015 /* 10kFirstRound.csv */,
 				4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */,
 				4449B5D71F4BE2E000DAB0D1 /* DetailViewController.swift */,
 				440B9C731F4D393200515600 /* DataAccessor.swift */,
@@ -251,7 +260,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				440B9C761F4D483500515600 /* 5kFirstRound.csv in Resources */,
+				440509471F4E97B700518015 /* SteepleFirstRound.csv in Resources */,
+				4405094B1F4E97F200518015 /* 1500FirstRound.csv in Resources */,
 				4449B5E01F4BE2E000DAB0D1 /* LaunchScreen.storyboard in Resources */,
+				440509491F4E97E800518015 /* 10kFirstRound.csv in Resources */,
 				442436A31F4BE9FE001D2EF5 /* Old-Results in Resources */,
 				4449B5DD1F4BE2E000DAB0D1 /* Assets.xcassets in Resources */,
 				4449B5DB1F4BE2E000DAB0D1 /* Main.storyboard in Resources */,
