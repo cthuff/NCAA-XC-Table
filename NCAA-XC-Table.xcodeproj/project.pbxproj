@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		440509451F4E819000518015 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440509441F4E819000518015 /* Setup.swift */; };
+		440509451F4E819000518015 /* DistanceSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440509441F4E819000518015 /* DistanceSetup.swift */; };
 		440509471F4E97B700518015 /* SteepleFirstRound.csv in Resources */ = {isa = PBXBuildFile; fileRef = 440509461F4E97B700518015 /* SteepleFirstRound.csv */; };
 		440509491F4E97E800518015 /* 10kFirstRound.csv in Resources */ = {isa = PBXBuildFile; fileRef = 440509481F4E97E800518015 /* 10kFirstRound.csv */; };
 		4405094B1F4E97F200518015 /* 1500FirstRound.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4405094A1F4E97F200518015 /* 1500FirstRound.csv */; };
 		440B9C741F4D393200515600 /* DataAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440B9C731F4D393200515600 /* DataAccessor.swift */; };
 		440B9C761F4D483500515600 /* 5kFirstRound.csv in Resources */ = {isa = PBXBuildFile; fileRef = 440B9C751F4D483500515600 /* 5kFirstRound.csv */; };
 		442436A31F4BE9FE001D2EF5 /* Old-Results in Resources */ = {isa = PBXBuildFile; fileRef = 442436A21F4BE9FE001D2EF5 /* Old-Results */; };
-		4449B5D41F4BE2E000DAB0D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5D31F4BE2E000DAB0D1 /* AppDelegate.swift */; };
+		44284A4A1F4F958700530730 /* SprintSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44284A491F4F958700530730 /* SprintSetup.swift */; };
 		4449B5D61F4BE2E000DAB0D1 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */; };
 		4449B5D81F4BE2E000DAB0D1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5D71F4BE2E000DAB0D1 /* DetailViewController.swift */; };
 		4449B5DB1F4BE2E000DAB0D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4449B5D91F4BE2E000DAB0D1 /* Main.storyboard */; };
@@ -22,6 +22,8 @@
 		4449B5E01F4BE2E000DAB0D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4449B5DE1F4BE2E000DAB0D1 /* LaunchScreen.storyboard */; };
 		4449B5EB1F4BE2E100DAB0D1 /* NCAA_XC_TableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5EA1F4BE2E100DAB0D1 /* NCAA_XC_TableTests.swift */; };
 		4449B5F61F4BE2E100DAB0D1 /* NCAA_XC_TableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5F51F4BE2E100DAB0D1 /* NCAA_XC_TableUITests.swift */; };
+		44982AA41F4FB8410030C487 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44982AA31F4FB8410030C487 /* AppDelegate.swift */; };
+		44982B211F4FD4E40030C487 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44982B201F4FD4E40030C487 /* PickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,15 +44,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		440509441F4E819000518015 /* Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
+		440509441F4E819000518015 /* DistanceSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceSetup.swift; sourceTree = "<group>"; };
 		440509461F4E97B700518015 /* SteepleFirstRound.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SteepleFirstRound.csv; sourceTree = "<group>"; };
 		440509481F4E97E800518015 /* 10kFirstRound.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 10kFirstRound.csv; sourceTree = "<group>"; };
 		4405094A1F4E97F200518015 /* 1500FirstRound.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 1500FirstRound.csv; sourceTree = "<group>"; };
 		440B9C731F4D393200515600 /* DataAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccessor.swift; sourceTree = "<group>"; };
 		440B9C751F4D483500515600 /* 5kFirstRound.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 5kFirstRound.csv; sourceTree = "<group>"; };
 		442436A21F4BE9FE001D2EF5 /* Old-Results */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Old-Results"; sourceTree = "<group>"; };
+		44284A491F4F958700530730 /* SprintSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SprintSetup.swift; sourceTree = "<group>"; };
 		4449B5D01F4BE2E000DAB0D1 /* NCAA-XC-Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NCAA-XC-Table.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4449B5D31F4BE2E000DAB0D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		4449B5D71F4BE2E000DAB0D1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4449B5DA1F4BE2E000DAB0D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,8 @@
 		4449B5F11F4BE2E100DAB0D1 /* NCAA-XC-TableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NCAA-XC-TableUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4449B5F51F4BE2E100DAB0D1 /* NCAA_XC_TableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCAA_XC_TableUITests.swift; sourceTree = "<group>"; };
 		4449B5F71F4BE2E100DAB0D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44982AA31F4FB8410030C487 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		44982B201F4FD4E40030C487 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,15 +118,17 @@
 		4449B5D21F4BE2E000DAB0D1 /* NCAA-XC-Table */ = {
 			isa = PBXGroup;
 			children = (
-				4449B5D31F4BE2E000DAB0D1 /* AppDelegate.swift */,
+				44982AA31F4FB8410030C487 /* AppDelegate.swift */,
 				4405094A1F4E97F200518015 /* 1500FirstRound.csv */,
 				440B9C751F4D483500515600 /* 5kFirstRound.csv */,
 				440509461F4E97B700518015 /* SteepleFirstRound.csv */,
 				440509481F4E97E800518015 /* 10kFirstRound.csv */,
 				4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */,
 				4449B5D71F4BE2E000DAB0D1 /* DetailViewController.swift */,
+				44982B201F4FD4E40030C487 /* PickerViewController.swift */,
 				440B9C731F4D393200515600 /* DataAccessor.swift */,
-				440509441F4E819000518015 /* Setup.swift */,
+				440509441F4E819000518015 /* DistanceSetup.swift */,
+				44284A491F4F958700530730 /* SprintSetup.swift */,
 				4449B5D91F4BE2E000DAB0D1 /* Main.storyboard */,
 				4449B5DC1F4BE2E000DAB0D1 /* Assets.xcassets */,
 				4449B5DE1F4BE2E000DAB0D1 /* LaunchScreen.storyboard */,
@@ -291,11 +297,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44982AA41F4FB8410030C487 /* AppDelegate.swift in Sources */,
 				4449B5D81F4BE2E000DAB0D1 /* DetailViewController.swift in Sources */,
 				4449B5D61F4BE2E000DAB0D1 /* MasterViewController.swift in Sources */,
 				440B9C741F4D393200515600 /* DataAccessor.swift in Sources */,
-				440509451F4E819000518015 /* Setup.swift in Sources */,
-				4449B5D41F4BE2E000DAB0D1 /* AppDelegate.swift in Sources */,
+				44284A4A1F4F958700530730 /* SprintSetup.swift in Sources */,
+				44982B211F4FD4E40030C487 /* PickerViewController.swift in Sources */,
+				440509451F4E819000518015 /* DistanceSetup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
