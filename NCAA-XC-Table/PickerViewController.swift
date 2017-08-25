@@ -8,14 +8,35 @@
 
 import UIKit
 
+var minutes:Array = [Int]()
+var seconds = [Int]()
+var miliseconds = [Int]()
+
 class PickerViewConroller: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    func makeTimer()
+    {
+        var x: Int = 0
+        while x <= 60
+        {
+            minutes.append(x)
+            seconds.append(x)
+            x = x + 1
+        }
+        x = 0
+        while x <= 100
+        {
+            miliseconds.append(x)
+        }
+    }
+
     @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var eventPicker: UIPickerView!
     @IBOutlet weak var timePicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        makeTimer()
         dismissButton.addTarget(self,action: #selector(self.pickerDidFinish),for: .touchUpInside)
         // Do any additional setup after loading the view, typically from a nib.
             }
@@ -37,12 +58,25 @@ class PickerViewConroller: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) ->
         Int{
+            if (pickerView == timePicker) {
+                if component == 1 {
+                    return minutes.count
+                }
+                else if component == 2 {
+                    return seconds.count
+                }
+                else {
+                    return miliseconds.count
+                }
+            }
+            else {
             return menEventList.count
+            }
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) ->
         String? {
             if pickerView == timePicker {
-                return timePicker[row]
+                return "\(minutes[row])" + "\(seconds[row])" + "\(miliseconds[row])"
             }
             else {
             return menEventList[row]

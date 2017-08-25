@@ -231,9 +231,9 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zUe-qj-hU8">
-                                <rect key="frame" x="21" y="45" width="333" height="250"/>
+                                <rect key="frame" x="21" y="45" width="320" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="yrQ-Xi-0Nh"/>
+                                    <constraint firstAttribute="height" constant="250" id="yrQ-Xi-0Nh"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="SFr-lL-0aq" id="niq-qv-8Ma"/>
@@ -241,7 +241,7 @@
                                 </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xZe-Kn-lwC">
-                                <rect key="frame" x="21" y="321" width="333" height="250"/>
+                                <rect key="frame" x="21" y="321" width="320" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="ZCJ-Nh-GAk"/>
                                 </constraints>
@@ -255,8 +255,9 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="L1B-HJ-3Sm" secondAttribute="trailing" constant="111.5" id="917-6O-z1i"/>
                             <constraint firstItem="L1B-HJ-3Sm" firstAttribute="top" secondItem="xZe-Kn-lwC" secondAttribute="bottom" constant="25" id="J5e-Q8-OeR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xZe-Kn-lwC" secondAttribute="trailing" constant="5" id="puz-VH-pe6"/>
-                            <constraint firstItem="xZe-Kn-lwC" firstAttribute="leading" secondItem="UM7-Xb-RlI" secondAttribute="leadingMargin" constant="5" id="wtP-Ga-w8E"/>
+                            <constraint firstItem="xZe-Kn-lwC" firstAttribute="trailing" secondItem="zUe-qj-hU8" secondAttribute="trailing" constant="5" id="QEI-rv-r5r"/>
+                            <constraint firstItem="xZe-Kn-lwC" firstAttribute="leading" secondItem="zUe-qj-hU8" secondAttribute="leading" constant="5" id="hg8-Kd-Uzl"/>
+                            <constraint firstItem="xZe-Kn-lwC" firstAttribute="top" secondItem="zUe-qj-hU8" secondAttribute="bottom" constant="25" id="jcH-2T-KuF"/>
                             <constraint firstItem="L1B-HJ-3Sm" firstAttribute="leading" secondItem="UM7-Xb-RlI" secondAttribute="leadingMargin" constant="111.5" id="zcJ-JJ-4RY"/>
                         </constraints>
                     </view>
