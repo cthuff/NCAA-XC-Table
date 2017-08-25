@@ -27,6 +27,7 @@ class PickerViewConroller: UIViewController, UIPickerViewDelegate, UIPickerViewD
         while x <= 100
         {
             miliseconds.append(x)
+            x = x + 1
         }
     }
 
@@ -40,7 +41,7 @@ class PickerViewConroller: UIViewController, UIPickerViewDelegate, UIPickerViewD
         dismissButton.addTarget(self,action: #selector(self.pickerDidFinish),for: .touchUpInside)
         // Do any additional setup after loading the view, typically from a nib.
             }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -49,7 +50,7 @@ class PickerViewConroller: UIViewController, UIPickerViewDelegate, UIPickerViewD
     // MARK: - PickerView
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int{
-        if pickerView == timePicker {
+        if pickerView.tag == 1 {
             return 3
         }
         else {
@@ -58,11 +59,11 @@ class PickerViewConroller: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) ->
         Int{
-            if (pickerView == timePicker) {
-                if component == 1 {
+            if (pickerView.tag == 1) {
+                if component == 0 {
                     return minutes.count
                 }
-                else if component == 2 {
+                else if component == 1 {
                     return seconds.count
                 }
                 else {
@@ -75,15 +76,31 @@ class PickerViewConroller: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) ->
         String? {
-            if pickerView == timePicker {
-                return "\(minutes[row])" + "\(seconds[row])" + "\(miliseconds[row])"
+            if pickerView.tag == 1 {
+                if component == 0 {
+                    return "\(minutes[row])"
+                }
+                else if component == 1 {
+                    return "\(seconds[row])"
+                }
+                else {
+                    return "\(miliseconds[row])"
+                }
+            }
+            else if pickerView.tag == 0 {
+            return menEventList[row]
             }
             else {
-            return menEventList[row]
+              return ""
             }
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        eventString = menEventList[row]
+        if pickerView.tag == 0 {
+            eventString = menEventList[row]
+        }
+        else if pickerView.tag == 1 {
+            performanceString = "\(minutes[row])" + ":\(seconds[row])." + "\(miliseconds[row])"
+        }
     
     }
     

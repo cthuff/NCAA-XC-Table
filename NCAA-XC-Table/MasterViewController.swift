@@ -9,6 +9,7 @@
 import UIKit
 
 var eventString: String = ""
+var performanceString: String = ""
 
 class MasterViewController: UITableViewController, UITextFieldDelegate{
 
@@ -63,10 +64,13 @@ class MasterViewController: UITableViewController, UITextFieldDelegate{
     override func viewWillAppear(_ animated: Bool) {
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
-        if eventString != ""
-        {
+        if eventString != "" {
             eventText.text = eventString
         }
+        if performanceString != "" {
+            performanceText.text = performanceString
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
