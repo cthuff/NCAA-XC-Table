@@ -8,6 +8,8 @@
 
 import UIKit
 
+var eventType = String()
+
 var minutes:Array = [Int]()
 var seconds = [Int]()
 var miliseconds = [Int]()
@@ -97,6 +99,13 @@ class PickerViewConroller: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 0 {
             eventString = menEventList[row]
+           /* if menEventList[row] == "800 Meters" || menEventList[row] == "1500 Meters" || menEventList[row] == "3000 Meter Steeplechase" || menEventList[row] == "5,000 Meters" || menEventList[row] == "10,000 Meters" {
+                eventType = "Distance"
+            }
+            else if menEventList[row] == "100 Meters" || menEventList[row] == "200 Meters" || menEventList[row] == "400 Meter Steeplechase" {
+                eventType = "Sprints"
+            }
+            */
         }
         else if pickerView.tag == 1 {
             performanceString = "\(minutes[row])" + ":\(seconds[row])." + "\(miliseconds[row])"

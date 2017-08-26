@@ -94,6 +94,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4430A73E1F5227BF00F5C9DD /* CSV Files */ = {
+			isa = PBXGroup;
+			children = (
+				4405094A1F4E97F200518015 /* 1500FirstRound.csv */,
+				440B9C751F4D483500515600 /* 5kFirstRound.csv */,
+				440509461F4E97B700518015 /* SteepleFirstRound.csv */,
+				440509481F4E97E800518015 /* 10kFirstRound.csv */,
+			);
+			name = "CSV Files";
+			sourceTree = "<group>";
+		};
 		4449B5C71F4BE2E000DAB0D1 = {
 			isa = PBXGroup;
 			children = (
@@ -119,10 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				44982AA31F4FB8410030C487 /* AppDelegate.swift */,
-				4405094A1F4E97F200518015 /* 1500FirstRound.csv */,
-				440B9C751F4D483500515600 /* 5kFirstRound.csv */,
-				440509461F4E97B700518015 /* SteepleFirstRound.csv */,
-				440509481F4E97E800518015 /* 10kFirstRound.csv */,
+				4430A73E1F5227BF00F5C9DD /* CSV Files */,
 				4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */,
 				4449B5D71F4BE2E000DAB0D1 /* DetailViewController.swift */,
 				44982B201F4FD4E40030C487 /* PickerViewController.swift */,

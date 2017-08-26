@@ -70,7 +70,12 @@ class MasterViewController: UITableViewController, UITextFieldDelegate{
         if performanceString != "" {
             performanceText.text = performanceString
         }
-        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        performanceText.endEditing(true)
+        performanceString = performanceText.text!
     }
 
     override func didReceiveMemoryWarning() {

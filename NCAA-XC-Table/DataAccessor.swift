@@ -48,15 +48,21 @@ var d1_west_javelinDistance = [String]()
 var d1_west_hepthalonPoints = [String]()
 var d1_west_decathalonPoints = [String]()
 
-var array = [String]()
-
 class DataManagement {
-
+    
     func reset() {
         d1_west_5kTimes.removeAll()
         d1_west_10kTimes.removeAll()
         d1_west_1500Times.removeAll()
         d1_west_steepleTimes.removeAll()
     }
+    
+    func sortAndSearchs(eventArray: [String], eventMark: String) -> Int {
+        var marks: [String] = eventArray
+        marks.append(eventMark)
+        marks.sort()
+        return marks.index(of: eventMark)!
+    }
+    
 }
 
