@@ -13,6 +13,11 @@ let d1_steeple_Key: String = "Steeplechase"
 let d1_5k_Key: String = "5k"
 let d1_10k_Key: String = "10k"
 
+var _2014 = [String]()
+var _2015 = [String]()
+var _2016 = [String]()
+var _2017 = [String]()
+
 class DistanceSetup {
     
     func init1500() -> [String] {
@@ -24,10 +29,13 @@ class DistanceSetup {
         var athlete = [String]()
         
         for line in lines {
-            let split = line.components(separatedBy: " ")
+            let split = line.components(separatedBy: "\t")
 //            let place = split[0]
-            let time = split[1]
-            
+            let time = split[4]
+            _2017.append(split[3])
+            _2016.append(split[2])
+            _2015.append(split[1])
+            _2014.append(split[0])
            athlete.append(time)
         }
         return athlete
@@ -42,10 +50,13 @@ class DistanceSetup {
         var athlete = [String]()
         
         for line in lines {
-            let split = line.components(separatedBy: " ")
+            let split = line.components(separatedBy: "\t")
             //            let place = split[0]
-            let time = split[1]
-            
+            let time = split[4]
+            _2017.append(split[3])
+            _2016.append(split[2])
+            _2015.append(split[1])
+            _2014.append(split[0])
             athlete.append(time)
         }
         return athlete
@@ -60,10 +71,13 @@ class DistanceSetup {
         var athlete = [String]()
         
         for line in lines {
-            let split = line.components(separatedBy: " ")
+            let split = line.components(separatedBy: "\t")
             //            let place = split[0]
-            let time = split[1]
-            
+            let time = split[4]
+            _2017.append(split[3])
+            _2016.append(split[2])
+            _2015.append(split[1])
+            _2014.append(split[0])
             athlete.append(time)
         }
         return athlete
@@ -80,8 +94,11 @@ class DistanceSetup {
         for line in lines {
             let split = line.components(separatedBy: " ")
             //            let place = split[0]
-            let time = split[1]
-            
+            let time = split[4]
+            _2017.append(split[3])
+            _2016.append(split[2])
+            _2015.append(split[1])
+            _2014.append(split[0])
             athlete.append(time)
         }
         return athlete

@@ -29,23 +29,25 @@ class MasterViewController: UITableViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         load()
+        let test = DistanceSetup.init()
+        test.initSteeple()
         if( d1_west_1500Times.isEmpty){
-           let test = DistanceSetup.init()
+           
            d1_west_1500Times = test.init1500()
             save()
         }
         if( d1_west_5kTimes.isEmpty){
-            let test = DistanceSetup.init()
+            
             d1_west_5kTimes = test.init5k()
             save()
         }
         if( d1_west_steepleTimes.isEmpty){
-            let test = DistanceSetup.init()
+            
             d1_west_steepleTimes = test.initSteeple()
             save()
         }
         if( d1_west_10kTimes.isEmpty){
-            let test = DistanceSetup.init()
+            
             d1_west_10kTimes = test.init10k()
             save()
         }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-var eventType = String()
+var eventArray = [String]()
 
 var minutes:Array = [Int]()
 var seconds = [Int]()
@@ -102,7 +102,7 @@ class PickerViewConroller: UIViewController, UIPickerViewDelegate, UIPickerViewD
            /* if menEventList[row] == "800 Meters" || menEventList[row] == "1500 Meters" || menEventList[row] == "3000 Meter Steeplechase" || menEventList[row] == "5,000 Meters" || menEventList[row] == "10,000 Meters" {
                 eventType = "Distance"
             }
-            else if menEventList[row] == "100 Meters" || menEventList[row] == "200 Meters" || menEventList[row] == "400 Meter Steeplechase" {
+            else if menEventList[row] == "100 Meters" || menEventList[row] == "200 Meters" || menEventList[row] == "400 Meter" {
                 eventType = "Sprints"
             }
             */
@@ -115,7 +115,60 @@ class PickerViewConroller: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     //MARK: - Dismiss Popover
     func pickerDidFinish(){
+        setEventArray()
         dismiss(animated: true, completion: nil)
+    }
+    
+    func setEventArray()
+    {
+        switch eventString {
+        case "100 Meters":
+            eventArray = d1_west_100mTimes
+        case "110 Meter Hurdles":
+            eventArray = d1_west_110hTimes
+        case "200 Meters":
+            eventArray = d1_west_200mTimes
+        case "400 Meters":
+            eventArray = d1_west_400mTimes
+        case "400 Meter Hurdles":
+            eventArray = d1_west_400hTimes
+        case "800 Meters":
+            eventArray = d1_west_800mTimes
+        case "1500 Meters":
+            eventArray = d1_west_1500Times
+        case "3000 Meter Steeplechase":
+            eventArray = d1_west_steepleTimes
+        case "5,000 Meters":
+            eventArray = d1_west_5kTimes
+        case "10,000 Meters":
+            eventArray = d1_west_10kTimes
+        case "4x100 Meter Relay":
+            eventArray = d1_west_4x100mTimes
+        case "4x400 Meter Relay":
+            eventArray = d1_west_4x400mTimes
+        case "Triple Jump":
+            eventArray = d1_west_tripleJumpDistance
+        case "Long Jump":
+            eventArray = d1_west_longJumpDistance
+        case "High Jump":
+            eventArray = d1_west_highJumpHeight
+        case "Pole Vault":
+            eventArray = d1_west_poleVaultHeight
+        case "Javelin":
+            eventArray = d1_west_javelinDistance
+        case "Shotput":
+            eventArray = d1_west_shotputDistance
+        case "Discus":
+            eventArray = d1_west_discusDistance
+        case "Hammer Throw":
+            eventArray = d1_west_hammerDistance
+        case "Decathalon":
+            eventArray = d1_west_decathalonPoints
+        case "Heptahalon":
+            eventArray = d1_west_hepthalonPoints
+        default:
+            print("Why is this so fucked up?")
+        }
     }
     
 
