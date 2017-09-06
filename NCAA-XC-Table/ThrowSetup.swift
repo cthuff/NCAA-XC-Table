@@ -8,50 +8,28 @@
 
 import Foundation
 
-let men_800_key: String = "800m"
-let men_1500_Key: String = "1500m"
-let men_steeple_Key: String = "Steeplechase"
-let men_5k_Key: String = "5k"
-let men_10k_Key: String = "10k"
+let men_discus_Key: String = "Discus"
+let men_javelin_Key: String = "Javelin"
+let men_shotput_Key: String = "Shot Put"
+let men_hammer_Ket: String = "Hammer Throw"
 
-class DistanceSetup {
+
+class ThrowSetup {
     
     func setup()
     {
-        men_800mTimes = load800()
-        
-        men_1500Times = load1500()
-        
-        men_steepleTimes = loadSteeple()
-        
-        men_5kTimes = load5k()
-        
-        men_10kTimes = load10k()
-        
+        men_discusDistance = loadDiscus()
+        men_discusDistance = men_discusDistance.sorted()
+        men_javelinDistance = loadJavelin()
+        men_javelinDistance = men_javelinDistance.sorted()
+        men_shotputDistance = loadShotPut()
+        men_shotputDistance = men_shotputDistance.sorted()
+        men_hammerDistance = loadHammer()
+        men_hammerDistance = men_hammerDistance.sorted()
     }
-
     
-    func load800() -> [String] {
-        let csv = Bundle.main.url(forResource: "800FirstRound", withExtension: "csv")
-        let text = try! String(contentsOf: csv!)
-        var lines = text.components(separatedBy: "\r\n")
-        lines.remove(at: 95)
-        
-        var athlete = [String]()
-        
-        for line in lines {
-            let split = line.components(separatedBy: "\t")
-            //            let place = split[0]
-            let time = split[4]
-            
-            athlete.append(time)
-        }
-        return athlete
-    }
-
-    
-    func load1500() -> [String] {
-        let csv = Bundle.main.url(forResource: "1500FirstRound", withExtension: "csv")
+    func loadDiscus() -> [String] {
+        let csv = Bundle.main.url(forResource: "DiscusFirstRound", withExtension: "csv")
         let text = try! String(contentsOf: csv!)
         var lines = text.components(separatedBy: "\r\n")
         lines.remove(at: 95)
@@ -68,8 +46,8 @@ class DistanceSetup {
         return athlete
     }
     
-    func load5k() -> [String] {
-        let csv = Bundle.main.url(forResource: "5kFirstRound", withExtension: "csv")
+    func loadJavelin() -> [String] {
+        let csv = Bundle.main.url(forResource: "JavelinFirstRound", withExtension: "csv")
         let text = try! String(contentsOf: csv!)
         var lines = text.components(separatedBy: "\r\n")
         lines.remove(at: 95)
@@ -80,13 +58,14 @@ class DistanceSetup {
             let split = line.components(separatedBy: "\t")
             //            let place = split[0]
             let time = split[4]
+ 
             athlete.append(time)
         }
         return athlete
     }
 
-    func loadSteeple() -> [String] {
-        let csv = Bundle.main.url(forResource: "SteepleFirstRound", withExtension: "csv")
+    func loadShotPut() -> [String] {
+        let csv = Bundle.main.url(forResource: "ShotPutFirstRound", withExtension: "csv")
         let text = try! String(contentsOf: csv!)
         var lines = text.components(separatedBy: "\r\n")
         lines.remove(at: 95)
@@ -97,13 +76,14 @@ class DistanceSetup {
             let split = line.components(separatedBy: "\t")
             //            let place = split[0]
             let time = split[4]
+
             athlete.append(time)
         }
         return athlete
     }
 
-    func load10k() -> [String] {
-        let csv = Bundle.main.url(forResource: "10kFirstRound", withExtension: "csv")
+    func loadHammer() -> [String] {
+        let csv = Bundle.main.url(forResource: "HammerThrowFirstRound", withExtension: "csv")
         let text = try! String(contentsOf: csv!)
         var lines = text.components(separatedBy: "\r\n")
         lines.remove(at: 95)
@@ -114,6 +94,7 @@ class DistanceSetup {
             let split = line.components(separatedBy: "\t")
             //            let place = split[0]
             let time = split[4]
+
             athlete.append(time)
         }
         return athlete

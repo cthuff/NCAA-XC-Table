@@ -8,23 +8,17 @@
 
 import Foundation
 
-let men_100m_Key: String = "100m"
-let men_200m_Key: String = "200m"
-let men_400m_Key: String = "400m"
-
-class SprintSetup {
+class RelaySetup {
     
     func setup()
     {
-        men_100mTimes = load100m()
-        men_100mTimes = men_100mTimes.sorted()
-        men_200mTimes = load200m()
-        men_200mTimes = men_200mTimes.sorted()
-        men_400mTimes = load400m()
-        men_400mTimes = men_400mTimes.sorted()
+        men_4x100mTimes = load4x100m()
+        men_4x100mTimes = men_4x100mTimes.sorted()
+        men_4x400mTimes = load4x400m()
+        men_4x400mTimes = men_4x400mTimes.sorted()
     }
     
-    func load100m() -> [String] {
+    func load4x100m() -> [String] {
         let csv = Bundle.main.url(forResource: "", withExtension: "csv")
         let text = try! String(contentsOf: csv!)
         var lines = text.components(separatedBy: "\r\n")
@@ -42,7 +36,7 @@ class SprintSetup {
         return athlete
     }
     
-    func load200m() -> [String] {
+    func load4x400m() -> [String] {
         let csv = Bundle.main.url(forResource: "", withExtension: "csv")
         let text = try! String(contentsOf: csv!)
         var lines = text.components(separatedBy: "\r\n")

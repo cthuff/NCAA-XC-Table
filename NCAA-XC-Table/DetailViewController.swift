@@ -108,51 +108,51 @@ class DetailViewController: UIViewController {
         place4.text = "\(index1 + 1)"
         switch eventString {
         case "3000 Meter Steeplechase":
-            time.text = d1_west_steepleTimes[index1]
-//            time1.text = d1_west_800mTimes[index1]
-            time2.text = d1_west_1500Times[index1]
-            time3.text = d1_west_5kTimes[index1]
-            time4.text = d1_west_10kTimes[index1]
+            time.text = men_steepleTimes[index1]
+            time1.text = men_800mTimes[index1]
+            time2.text = men_1500Times[index1]
+            time3.text = men_5kTimes[index1]
+            time4.text = men_10kTimes[index1]
             event1.text = "800 Meters"
             event2.text = "1500 Meters"
             event3.text = "5,000 Meters"
             event4.text = "10,000 Meters"
         case "800 Meters":
-            time.text = d1_west_800mTimes[index1]
-            time1.text = d1_west_400mTimes[index1]
-            time2.text = d1_west_1500Times[index1]
-            time3.text = d1_west_steepleTimes[index1]
-            time4.text = d1_west_5kTimes[index1]
+            time.text = men_800mTimes[index1]
+            time1.text = men_400mTimes[index1]
+            time2.text = men_1500Times[index1]
+            time3.text = men_steepleTimes[index1]
+            time4.text = men_5kTimes[index1]
             event1.text = "400 Meters"
             event2.text = "1500 Meters"
             event3.text = "3000 Meter Steeplechase"
             event4.text = "5,000 Meters"
         case "1500 Meters":
-            time.text = d1_west_1500Times[index1]
-//            time1.text = d1_west_800mimes[index1]
-            time2.text = d1_west_steepleTimes[index1]
-            time3.text = d1_west_5kTimes[index1]
-            time4.text = d1_west_10kTimes[index1]
+            time.text = men_1500Times[index1]
+            time1.text = men_800mTimes[index1]
+            time2.text = men_steepleTimes[index1]
+            time3.text = men_5kTimes[index1]
+            time4.text = men_10kTimes[index1]
             event1.text = "800 Meters"
             event2.text = "3000 Meter Steeplechase"
             event3.text = "5,000 Meteres"
             event4.text = "10,000 Meters"
         case "5,000 Meters":
-            time.text = d1_west_5kTimes[index1]
-//            time1.text = d1_west_800mTimes[index1]
-            time2.text = d1_west_1500Times[index1]
-            time3.text = d1_west_steepleTimes[index1]
-            time4.text = d1_west_10kTimes[index1]
+            time.text = men_5kTimes[index1]
+            time1.text = men_800mTimes[index1]
+            time2.text = men_1500Times[index1]
+            time3.text = men_steepleTimes[index1]
+            time4.text = men_10kTimes[index1]
             event1.text = "800 Meters"
             event2.text = "1500 Meters"
             event3.text = "3000 Meter Steeplechase"
             event4.text = "10,000 Meters"
         case "10,000 Meters":
-            time.text = d1_west_10kTimes[index1]
-//            time1.text = d1_west_800mTimes[index1]
-            time2.text = d1_west_1500Times[index1]
-            time3.text = d1_west_steepleTimes[index1]
-            time4.text = d1_west_5kTimes[index1]
+            time.text = men_10kTimes[index1]
+            time1.text = men_800mTimes[index1]
+            time2.text = men_1500Times[index1]
+            time3.text = men_steepleTimes[index1]
+            time4.text = men_5kTimes[index1]
             event1.text = "8000 Meters"
             event2.text = "1500 Meters"
             event3.text = "3000 Meter Steeplechase"
@@ -167,26 +167,26 @@ class DetailViewController: UIViewController {
         place2.text = "\(index1 + 1)"
         switch eventString {
         case "100 Meters":
-            time.text = d1_west_100mTimes[index1]
-            time1.text = d1_west_200mTimes[index1]
-            time2.text = d1_west_400mTimes[index1]
+            time.text = men_100mTimes[index1]
+            time1.text = men_200mTimes[index1]
+            time2.text = men_400mTimes[index1]
             tableCell3.isHidden = true
             tableCell4.isHidden = true
             event1.text = "200 Meters"
             event2.text = "400 Meters"
         case "200 Meters":
-            time.text = d1_west_200mTimes[index1]
-            time1.text = d1_west_100mTimes[index1]
-            time2.text = d1_west_400mTimes[index1]
+            time.text = men_200mTimes[index1]
+            time1.text = men_100mTimes[index1]
+            time2.text = men_400mTimes[index1]
             tableCell3.isHidden = true
             tableCell4.isHidden = true
             event1.text = "100 Meters"
             event2.text = "400 Meters"
         case "400 Meters":
-            time.text = d1_west_400mTimes[index1]
-            time1.text = d1_west_100mTimes[index1]
-            time2.text = d1_west_200mTimes[index1]
-            time3.text = d1_west_800mTimes[index1]
+            time.text = men_400mTimes[index1]
+            time1.text = men_100mTimes[index1]
+            time2.text = men_200mTimes[index1]
+            time3.text = men_800mTimes[index1]
             place3.text = "\(index1 + 1)"
             tableCell4.isHidden = true
             event1.text = "100 Meters"
@@ -203,16 +203,16 @@ class DetailViewController: UIViewController {
         func sprintEvents() {
             switch eventString {
             case "4x100 Meter Relay":
-                time.text = d1_west_4x100mTimes[index1]
-                time1.text = d1_west_4x400mTimes[index1]
+                time.text = men_4x100mTimes[index1]
+                time1.text = men_4x400mTimes[index1]
                 tableCell2.isHidden = true
                 tableCell3.isHidden = true
                 tableCell4.isHidden = true
                 event1.text = "4x400 Meter Relay"
 
             case "4x400 Meter Relay":
-                time.text = d1_west_4x400mTimes[index1]
-                time1.text = d1_west_4x100mTimes[index1]
+                time.text = men_4x400mTimes[index1]
+                time1.text = men_4x100mTimes[index1]
                 tableCell2.isHidden = true
                 tableCell3.isHidden = true
                 tableCell4.isHidden = true
@@ -230,38 +230,38 @@ class DetailViewController: UIViewController {
         place3.text = "\(index1 + 1)"
         switch eventString {
         case "Triple Jump":
-            time.text = d1_west_tripleJumpDistance[index1]
-            time1.text = d1_west_longJumpDistance[index1]
-            time2.text = d1_west_highJumpHeight[index1]
-            time3.text = d1_west_poleVaultHeight[index1]
+            time.text = men_tripleJumpDistance[index1]
+            time1.text = men_longJumpDistance[index1]
+            time2.text = men_highJumpHeight[index1]
+            time3.text = men_poleVaultHeight[index1]
             tableCell4.isHidden = true
             event1.text = "Long Jump"
             event2.text = "High Jump"
             event3.text = "Pole Vault"
 
         case "Long Jump":
-            time.text = d1_west_longJumpDistance[index1]
-            time1.text = d1_west_tripleJumpDistance[index1]
-            time2.text = d1_west_highJumpHeight[index1]
-            time3.text = d1_west_poleVaultHeight[index1]
+            time.text = men_longJumpDistance[index1]
+            time1.text = men_tripleJumpDistance[index1]
+            time2.text = men_highJumpHeight[index1]
+            time3.text = men_poleVaultHeight[index1]
             tableCell4.isHidden = true
             event1.text = "Triple Jump"
             event2.text = "High Jump"
             event3.text = "Pole Vault"
         case "High Jump":
-            time.text = d1_west_highJumpHeight[index1]
-            time1.text = d1_west_tripleJumpDistance[index1]
-            time2.text = d1_west_longJumpDistance[index1]
-            time3.text = d1_west_poleVaultHeight[index1]
+            time.text = men_highJumpHeight[index1]
+            time1.text = men_tripleJumpDistance[index1]
+            time2.text = men_longJumpDistance[index1]
+            time3.text = men_poleVaultHeight[index1]
             tableCell4.isHidden = true
             event1.text = "Triple Jump"
             event2.text = "Long Jump"
             event3.text = "Pole Valut"
         case "Pole Vault":
-            time.text = d1_west_poleVaultHeight[index1]
-            time1.text = d1_west_tripleJumpDistance[index1]
-            time2.text = d1_west_longJumpDistance[index1]
-            time3.text = d1_west_highJumpHeight[index1]
+            time.text = men_poleVaultHeight[index1]
+            time1.text = men_tripleJumpDistance[index1]
+            time2.text = men_longJumpDistance[index1]
+            time3.text = men_highJumpHeight[index1]
             tableCell4.isHidden = true
             event1.text = "Triple Jump"
             event2.text = "Long Jump"
@@ -279,37 +279,37 @@ class DetailViewController: UIViewController {
         
         switch eventString {
         case "Javelin":
-            time.text = d1_west_javelinDistance[index1]
-            time1.text = d1_west_shotputDistance[index1]
-            time2.text = d1_west_discusDistance[index1]
-            time3.text = d1_west_hammerDistance[index1]
+            time.text = men_javelinDistance[index1]
+            time1.text = men_shotputDistance[index1]
+            time2.text = men_discusDistance[index1]
+            time3.text = men_hammerDistance[index1]
             tableCell4.isHidden = true
             event1.text = "Shotput"
             event2.text = "Discus"
             event3.text = "Hammer Throw"
         case "Shotput":
-            time.text = d1_west_shotputDistance[index1]
-            time1.text = d1_west_javelinDistance[index1]
-            time2.text = d1_west_discusDistance[index1]
-            time3.text = d1_west_hammerDistance[index1]
+            time.text = men_shotputDistance[index1]
+            time1.text = men_javelinDistance[index1]
+            time2.text = men_discusDistance[index1]
+            time3.text = men_hammerDistance[index1]
             tableCell4.isHidden = true
             event1.text = "Javelin"
             event2.text = "Discus"
             event3.text = "Hammer Throw"
         case "Discus":
-            time.text = d1_west_discusDistance[index1]
-            time1.text = d1_west_javelinDistance[index1]
-            time2.text = d1_west_shotputDistance[index1]
-            time3.text = d1_west_hammerDistance[index1]
+            time.text = men_discusDistance[index1]
+            time1.text = men_javelinDistance[index1]
+            time2.text = men_shotputDistance[index1]
+            time3.text = men_hammerDistance[index1]
             tableCell4.isHidden = true
             event1.text = "Javelin"
             event2.text = "Shotput"
             event3.text = "Hammer Throw"
         case "Hammer Throw":
-            time.text = d1_west_hammerDistance[index1]
-            time1.text = d1_west_javelinDistance[index1]
-            time2.text = d1_west_discusDistance[index1]
-            time3.text = d1_west_highJumpHeight[index1]
+            time.text = men_hammerDistance[index1]
+            time1.text = men_javelinDistance[index1]
+            time2.text = men_discusDistance[index1]
+            time3.text = men_highJumpHeight[index1]
             tableCell4.isHidden = true
             event1.text = "Javelin"
             event2.text = "Shotput"
@@ -324,13 +324,13 @@ class DetailViewController: UIViewController {
         func sprintEvents() {
             switch eventString {
             case "Heptahalon":
-                time.text = d1_west_hepthalonPoints[index1]
+                time.text = men_hepthalonPoints[index1]
                 tableCell1.isHidden = true
                 tableCell2.isHidden = true
                 tableCell3.isHidden = true
                 tableCell4.isHidden = true
             case "Decathalon":
-                time.text = d1_west_decathalonPoints[index1]
+                time.text = men_decathalonPoints[index1]
                 tableCell1.isHidden = true
                 tableCell2.isHidden = true
                 tableCell3.isHidden = true

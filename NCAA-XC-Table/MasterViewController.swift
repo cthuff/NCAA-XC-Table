@@ -28,29 +28,7 @@ class MasterViewController: UITableViewController, UITextFieldDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        load()
-        let test = DistanceSetup.init()
-        test.initSteeple()
-        if( d1_west_1500Times.isEmpty){
-           
-           d1_west_1500Times = test.init1500()
-            save()
-        }
-        if( d1_west_5kTimes.isEmpty){
-            
-            d1_west_5kTimes = test.init5k()
-            save()
-        }
-        if( d1_west_steepleTimes.isEmpty){
-            
-            d1_west_steepleTimes = test.initSteeple()
-            save()
-        }
-        if( d1_west_10kTimes.isEmpty){
-            
-            d1_west_10kTimes = test.init10k()
-            save()
-        }
+//        load()
         
         eventText.allowsEditingTextAttributes = false
         // Do any additional setup after loading the view, typically from a nib.
@@ -78,6 +56,36 @@ class MasterViewController: UITableViewController, UITextFieldDelegate{
         super.viewWillDisappear(animated)
         performanceText.endEditing(true)
         performanceString = performanceText.text!
+        switch eventString {
+        case "800 Meters", "1500 Meters",  "3000 Meter Steeplechase",  "5,000 Meters", "10,000 Meters" :
+            let sprint = SprintSetup.init()
+            let distance = DistanceSetup.init()
+            distance.setup()
+            sprint.setup()
+        case "100 Meters", "200 Meters",  "400 Meters":
+            let sprints = SprintSetup.init()
+            sprints.setup()
+            
+        case "4x100 Meter Relay", "4x100 Meter Relay":
+            let relays = RelaySetup.init()
+            relays.setup()
+            
+        case "High Jump", "Pole Valut",  "Triple Jump",  "Long Jump":
+            let jumps = JumpSetup.init()
+            jumps.setup()
+            
+        case "Discus", "Shotput",  "Hammer Throw",  "Javelin":
+            let throwers = ThrowSetup.init()
+            throwers.setup()
+            
+        case "Heptahalon",  "Decathalon":
+            break
+        default: break
+            
+        }
+        setEventArray()
+
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -100,32 +108,332 @@ class MasterViewController: UITableViewController, UITextFieldDelegate{
         }
     }
 
+    func setEventArray()
+    {
+        switch eventString {
+        case "100 Meters":
+            let csv = Bundle.main.url(forResource: "100FirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_100mTimes
+        case "110 Meter Hurdles":
+            let csv = Bundle.main.url(forResource: "110HFirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_110hTimes
+        case "200 Meters":
+            let csv = Bundle.main.url(forResource: "200FirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_200mTimes
+        case "400 Meters":
+            let csv = Bundle.main.url(forResource: "400FirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_400mTimes
+        case "400 Meter Hurdles":
+            let csv = Bundle.main.url(forResource: "400HFirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_400hTimes
+        case "800 Meters":
+            let csv = Bundle.main.url(forResource: "800FirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_800mTimes
+        case "1500 Meters":
+            let csv = Bundle.main.url(forResource: "1500FirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_1500Times
+        case "3000 Meter Steeplechase":
+            let csv = Bundle.main.url(forResource: "SteepleFirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_steepleTimes
+        case "5,000 Meters":
+            let csv = Bundle.main.url(forResource: "5kFirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_5kTimes
+        case "10,000 Meters":
+            let csv = Bundle.main.url(forResource: "10kFirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_10kTimes
+        case "4x100 Meter Relay":
+            let csv = Bundle.main.url(forResource: "4x100FirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_4x100mTimes
+        case "4x400 Meter Relay":
+            let csv = Bundle.main.url(forResource: "4x400FirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_4x400mTimes
+        case "Triple Jump":
+            let csv = Bundle.main.url(forResource: "TripleJumpFirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_tripleJumpDistance
+        case "Long Jump":
+            let csv = Bundle.main.url(forResource: "LongJumpFirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_longJumpDistance
+        case "High Jump":
+            let csv = Bundle.main.url(forResource: "HighJumpFirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_highJumpHeight
+        case "Pole Vault":
+            let csv = Bundle.main.url(forResource: "PoleVaultFirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_poleVaultHeight
+        case "Javelin":
+            let csv = Bundle.main.url(forResource: "JevelinFirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_javelinDistance
+        case "Shotput":
+            let csv = Bundle.main.url(forResource: "ShotPutFirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_shotputDistance
+        case "Discus":
+            let csv = Bundle.main.url(forResource: "DiscusFirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_discusDistance
+        case "Hammer Throw":
+            let csv = Bundle.main.url(forResource: "HammerThrowFirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_hammerDistance
+        case "Decathlon":
+            let csv = Bundle.main.url(forResource: "DecathlonFirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_decathalonPoints
+        case "Heptahlon":
+            let csv = Bundle.main.url(forResource: "HeptathlonFirstRound", withExtension: "csv")
+            let text = try! String(contentsOf: csv!)
+            var lines = text.components(separatedBy: "\r\n")
+            lines.remove(at: 95)
+            for line in lines {
+                let split = line.components(separatedBy: "\t")
+                _2017.append(split[3])
+                _2016.append(split[2])
+                _2015.append(split[1])
+                _2014.append(split[0])
+            }
+            eventArray = men_hepthalonPoints
+        default:
+            print("Why is this so fucked up?")
+        }
+    }
+    
+
+    
     // MARK: - Saving Data
     
     func save() {
-        UserDefaults.standard.set(d1_west_1500Times, forKey: d1_1500_Key)
-        UserDefaults.standard.set(d1_west_steepleTimes, forKey: d1_steeple_Key)
-        UserDefaults.standard.set(d1_west_5kTimes, forKey: d1_5k_Key)
-        UserDefaults.standard.set(d1_west_10kTimes, forKey: d1_10k_Key)
+        UserDefaults.standard.set(men_800mTimes, forKey: men_800_key)
+        UserDefaults.standard.set(men_1500Times, forKey: men_1500_Key)
+        UserDefaults.standard.set(men_steepleTimes, forKey: men_steeple_Key)
+        UserDefaults.standard.set(men_5kTimes, forKey: men_5k_Key)
+        UserDefaults.standard.set(men_10kTimes, forKey: men_10k_Key)
         UserDefaults.standard.synchronize()
     }
     
-     // MARK: - Loading Data
-    
-    func load(){
-        if let loadedData = UserDefaults.standard.array(forKey: d1_1500_Key) as? [String] {
-            d1_west_1500Times = loadedData
-        }
-        if let loadedData = UserDefaults.standard.array(forKey: d1_steeple_Key) as? [String] {
-            d1_west_steepleTimes = loadedData
-        }
-        if let loadedData = UserDefaults.standard.array(forKey: d1_5k_Key) as? [String] {
-            d1_west_5kTimes = loadedData
-        }
-        if let loadedData = UserDefaults.standard.array(forKey: d1_10k_Key) as? [String] {
-            d1_west_10kTimes = loadedData
-        }
-    }
+//     // MARK: - Loading Data
+//    
+//    func load(){
+//        if let loadedData = UserDefaults.standard.array(forKey: men_800_key) as? [String] {
+//            men_800mTimes = loadedData
+//        }
+//        if let loadedData = UserDefaults.standard.array(forKey: men_1500_Key) as? [String] {
+//            men_1500Times = loadedData
+//        }
+//        if let loadedData = UserDefaults.standard.array(forKey: men_steeple_Key) as? [String] {
+//            men_steepleTimes = loadedData
+//        }
+//        if let loadedData = UserDefaults.standard.array(forKey: men_5k_Key) as? [String] {
+//            men_5kTimes = loadedData
+//        }
+//        if let loadedData = UserDefaults.standard.array(forKey: men_10k_Key) as? [String] {
+//            men_10kTimes = loadedData
+//        }
+//    }
 
 }
 

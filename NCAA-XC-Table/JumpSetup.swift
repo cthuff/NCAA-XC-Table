@@ -8,50 +8,22 @@
 
 import Foundation
 
-let men_800_key: String = "800m"
-let men_1500_Key: String = "1500m"
-let men_steeple_Key: String = "Steeplechase"
-let men_5k_Key: String = "5k"
-let men_10k_Key: String = "10k"
-
-class DistanceSetup {
+class JumpSetup {
     
     func setup()
     {
-        men_800mTimes = load800()
-        
-        men_1500Times = load1500()
-        
-        men_steepleTimes = loadSteeple()
-        
-        men_5kTimes = load5k()
-        
-        men_10kTimes = load10k()
-        
+        men_tripleJumpDistance = loadTripleJump()
+        men_tripleJumpDistance = men_tripleJumpDistance.sorted()
+        men_longJumpDistance = loadLongJump()
+        men_longJumpDistance = men_longJumpDistance.sorted()
+        men_highJumpHeight = loadHighJump()
+        men_highJumpHeight = men_highJumpHeight.sorted()
+        men_poleVaultHeight = loadPoleVault()
+        men_poleVaultHeight = men_poleVaultHeight.sorted()
     }
-
     
-    func load800() -> [String] {
-        let csv = Bundle.main.url(forResource: "800FirstRound", withExtension: "csv")
-        let text = try! String(contentsOf: csv!)
-        var lines = text.components(separatedBy: "\r\n")
-        lines.remove(at: 95)
-        
-        var athlete = [String]()
-        
-        for line in lines {
-            let split = line.components(separatedBy: "\t")
-            //            let place = split[0]
-            let time = split[4]
-            
-            athlete.append(time)
-        }
-        return athlete
-    }
-
-    
-    func load1500() -> [String] {
-        let csv = Bundle.main.url(forResource: "1500FirstRound", withExtension: "csv")
+    func loadTripleJump() -> [String] {
+        let csv = Bundle.main.url(forResource: "TripleJumpFirstRound", withExtension: "csv")
         let text = try! String(contentsOf: csv!)
         var lines = text.components(separatedBy: "\r\n")
         lines.remove(at: 95)
@@ -68,8 +40,8 @@ class DistanceSetup {
         return athlete
     }
     
-    func load5k() -> [String] {
-        let csv = Bundle.main.url(forResource: "5kFirstRound", withExtension: "csv")
+    func loadLongJump() -> [String] {
+        let csv = Bundle.main.url(forResource: "LongJumpFirstRound", withExtension: "csv")
         let text = try! String(contentsOf: csv!)
         var lines = text.components(separatedBy: "\r\n")
         lines.remove(at: 95)
@@ -80,13 +52,14 @@ class DistanceSetup {
             let split = line.components(separatedBy: "\t")
             //            let place = split[0]
             let time = split[4]
+ 
             athlete.append(time)
         }
         return athlete
     }
 
-    func loadSteeple() -> [String] {
-        let csv = Bundle.main.url(forResource: "SteepleFirstRound", withExtension: "csv")
+    func loadHighJump() -> [String] {
+        let csv = Bundle.main.url(forResource: "HighJumpFirstRound", withExtension: "csv")
         let text = try! String(contentsOf: csv!)
         var lines = text.components(separatedBy: "\r\n")
         lines.remove(at: 95)
@@ -97,13 +70,14 @@ class DistanceSetup {
             let split = line.components(separatedBy: "\t")
             //            let place = split[0]
             let time = split[4]
+
             athlete.append(time)
         }
         return athlete
     }
 
-    func load10k() -> [String] {
-        let csv = Bundle.main.url(forResource: "10kFirstRound", withExtension: "csv")
+    func loadPoleVault() -> [String] {
+        let csv = Bundle.main.url(forResource: "PoleVaultThrowFirstRound", withExtension: "csv")
         let text = try! String(contentsOf: csv!)
         var lines = text.components(separatedBy: "\r\n")
         lines.remove(at: 95)
@@ -114,6 +88,7 @@ class DistanceSetup {
             let split = line.components(separatedBy: "\t")
             //            let place = split[0]
             let time = split[4]
+
             athlete.append(time)
         }
         return athlete
