@@ -16,22 +16,22 @@ var miliseconds = [Int]()
 
 class PickerViewConroller: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    func makeTimer()
-    {
-        var x: Int = 0
-        while x <= 60
-        {
-            minutes.append(x)
-            seconds.append(x)
-            x = x + 1
-        }
-        x = 0
-        while x <= 100
-        {
-            miliseconds.append(x)
-            x = x + 1
-        }
-    }
+//    func makeTimer()
+//    {
+//        var x: Int = 0
+//        while x <= 60
+//        {
+//            minutes.append(x)
+//            seconds.append(x)
+//            x = x + 1
+//        }
+//        x = 0
+//        while x <= 100
+//        {
+//            miliseconds.append(x)
+//            x = x + 1
+//        }
+//    }
 
     @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var eventPicker: UIPickerView!
@@ -39,7 +39,7 @@ class PickerViewConroller: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeTimer()
+//        makeTimer()
         dismissButton.addTarget(self,action: #selector(self.pickerDidFinish),for: .touchUpInside)
         // Do any additional setup after loading the view, typically from a nib.
             }
@@ -61,55 +61,46 @@ class PickerViewConroller: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) ->
         Int{
-            if (pickerView.tag == 1) {
-                if component == 0 {
-                    return minutes.count
-                }
-                else if component == 1 {
-                    return seconds.count
-                }
-                else {
-                    return miliseconds.count
-                }
-            }
-            else {
-            return menEventList.count
-            }
+//            if (pickerView.tag == 1) {
+//                if component == 0 {
+//                    return minutes.count
+//                }
+//                else if component == 1 {
+//                    return seconds.count
+//                }
+//                else {
+//                    return miliseconds.count
+//                }
+//            }
+//            else {
+            return eventEventList.count
+            
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) ->
         String? {
-            if pickerView.tag == 1 {
-                if component == 0 {
-                    return "\(minutes[row])"
-                }
-                else if component == 1 {
-                    return "\(seconds[row])"
-                }
-                else {
-                    return "\(miliseconds[row])"
-                }
-            }
-            else if pickerView.tag == 0 {
-            return menEventList[row]
-            }
-            else {
-              return ""
-            }
+//            if pickerView.tag == 1 {
+//                if component == 0 {
+//                    return "\(minutes[row])"
+//                }
+//                else if component == 1 {
+//                    return "\(seconds[row])"
+//                }
+//                else {
+//                    return "\(miliseconds[row])"
+//                }
+//            }
+//            else if pickerView.tag == 0 {
+            return eventEventList[row]
+            
     }
+
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == 0 {
-            eventString = menEventList[row]
-           /* if menEventList[row] == "800 Meters" || menEventList[row] == "1500 Meters" || menEventList[row] == "3000 Meter Steeplechase" || menEventList[row] == "5,000 Meters" || menEventList[row] == "10,000 Meters" {
-                eventType = "Distance"
-            }
-            else if menEventList[row] == "100 Meters" || menEventList[row] == "200 Meters" || menEventList[row] == "400 Meter" {
-                eventType = "Sprints"
-            }
-            */
-        }
-        else if pickerView.tag == 1 {
-            performanceString = "\(minutes[row])" + ":\(seconds[row])." + "\(miliseconds[row])"
-        }
+//        if pickerView.tag == 0 {
+            eventString = eventEventList[row]
+//        }
+//        else if pickerView.tag == 1 {
+//            performanceString = "\(minutes[row])" + ":\(seconds[row])." + "\(miliseconds[row])"
+//        }
     
     }
     

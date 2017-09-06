@@ -445,8 +445,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="NCAA Performance Converter" id="oeG-Gg-DlC"/>
                     <connections>
+                        <outlet property="divisionSelect" destination="HIU-Io-7Gb" id="mXh-ea-jWP"/>
                         <outlet property="eventText" destination="4r8-9h-xtX" id="OcE-Cj-gXS"/>
+                        <outlet property="genderSelect" destination="OwK-wh-8iA" id="qGt-4e-pg8"/>
                         <outlet property="performanceText" destination="HaB-dD-DzL" id="af9-Xs-VX1"/>
+                        <outlet property="regionSelect" destination="AX9-oe-Rnz" id="2Wn-HM-793"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dev-D8-OO3" userLabel="First Responder" sceneMemberID="firstResponder"/>

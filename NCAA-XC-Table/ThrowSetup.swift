@@ -8,24 +8,15 @@
 
 import Foundation
 
-let men_discus_Key: String = "Discus"
-let men_javelin_Key: String = "Javelin"
-let men_shotput_Key: String = "Shot Put"
-let men_hammer_Ket: String = "Hammer Throw"
-
-
 class ThrowSetup {
     
-    func setup()
+    func eventSetup()
     {
-        men_discusDistance = loadDiscus()
-        men_discusDistance = men_discusDistance.sorted()
-        men_javelinDistance = loadJavelin()
-        men_javelinDistance = men_javelinDistance.sorted()
-        men_shotputDistance = loadShotPut()
-        men_shotputDistance = men_shotputDistance.sorted()
-        men_hammerDistance = loadHammer()
-        men_hammerDistance = men_hammerDistance.sorted()
+        event_discusDistance = loadDiscus()
+        event_javelinDistance = loadJavelin()
+        event_shotputDistance = loadShotPut()
+        event_hammerDistance = loadHammer()
+        
     }
     
     func loadDiscus() -> [String] {
@@ -39,7 +30,7 @@ class ThrowSetup {
         for line in lines {
             let split = line.components(separatedBy: "\t")
 //            let place = split[0]
-            let time = split[4]
+            let time = split[eventIndex + 4]
 
            athlete.append(time)
         }
@@ -57,7 +48,7 @@ class ThrowSetup {
         for line in lines {
             let split = line.components(separatedBy: "\t")
             //            let place = split[0]
-            let time = split[4]
+            let time = split[eventIndex + 4]
  
             athlete.append(time)
         }
@@ -75,7 +66,7 @@ class ThrowSetup {
         for line in lines {
             let split = line.components(separatedBy: "\t")
             //            let place = split[0]
-            let time = split[4]
+            let time = split[eventIndex + 4]
 
             athlete.append(time)
         }
@@ -93,7 +84,7 @@ class ThrowSetup {
         for line in lines {
             let split = line.components(separatedBy: "\t")
             //            let place = split[0]
-            let time = split[4]
+            let time = split[eventIndex + 4]
 
             athlete.append(time)
         }

@@ -8,24 +8,18 @@
 
 import Foundation
 
-let men_100m_Key: String = "100m"
-let men_200m_Key: String = "200m"
-let men_400m_Key: String = "400m"
-
 class SprintSetup {
     
-    func setup()
+    func eventSetup()
     {
-        men_100mTimes = load100m()
-        men_100mTimes = men_100mTimes.sorted()
-        men_200mTimes = load200m()
-        men_200mTimes = men_200mTimes.sorted()
-        men_400mTimes = load400m()
-        men_400mTimes = men_400mTimes.sorted()
+        event_100mTimes = load100m()
+        event_200mTimes = load200m()
+        event_400mTimes = load400m()
+        
     }
     
     func load100m() -> [String] {
-        let csv = Bundle.main.url(forResource: "", withExtension: "csv")
+        let csv = Bundle.main.url(forResource: "100FirstRound", withExtension: "csv")
         let text = try! String(contentsOf: csv!)
         var lines = text.components(separatedBy: "\r\n")
         lines.remove(at: 95)
@@ -35,7 +29,7 @@ class SprintSetup {
         for line in lines {
             let split = line.components(separatedBy: "\t")
 //            let place = split[0]
-            let time = split[1]
+            let time = split[eventIndex + 4]
             
            athlete.append(time)
         }
@@ -43,7 +37,7 @@ class SprintSetup {
     }
     
     func load200m() -> [String] {
-        let csv = Bundle.main.url(forResource: "", withExtension: "csv")
+        let csv = Bundle.main.url(forResource: "200FirstRound", withExtension: "csv")
         let text = try! String(contentsOf: csv!)
         var lines = text.components(separatedBy: "\r\n")
         lines.remove(at: 95)
@@ -53,7 +47,7 @@ class SprintSetup {
         for line in lines {
             let split = line.components(separatedBy: "\t")
             //            let place = split[0]
-            let time = split[1]
+            let time = split[eventIndex + 4]
             
             athlete.append(time)
         }
@@ -61,7 +55,7 @@ class SprintSetup {
     }
 
     func load400m() -> [String] {
-        let csv = Bundle.main.url(forResource: "", withExtension: "csv")
+        let csv = Bundle.main.url(forResource: "400FirstRound", withExtension: "csv")
         let text = try! String(contentsOf: csv!)
         var lines = text.components(separatedBy: "\r\n")
         lines.remove(at: 95)
@@ -71,16 +65,11 @@ class SprintSetup {
         for line in lines {
             let split = line.components(separatedBy: "\t")
             //            let place = split[0]
-            let time = split[1]
+            let time = split[eventIndex + 4]
             
             athlete.append(time)
         }
         return athlete
     }
 
-    func reset() {
-        men_100mTimes.removeAll()
-        men_200mTimes.removeAll()
-        men_400mTimes.removeAll()
-    }
 }

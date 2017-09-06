@@ -8,25 +8,15 @@
 
 import Foundation
 
-let men_800_key: String = "800m"
-let men_1500_Key: String = "1500m"
-let men_steeple_Key: String = "Steeplechase"
-let men_5k_Key: String = "5k"
-let men_10k_Key: String = "10k"
-
 class DistanceSetup {
     
     func setup()
     {
-        men_800mTimes = load800()
-        
-        men_1500Times = load1500()
-        
-        men_steepleTimes = loadSteeple()
-        
-        men_5kTimes = load5k()
-        
-        men_10kTimes = load10k()
+        event_800mTimes = load800()
+        event_1500Times = load1500()
+        event_steepleTimes = loadSteeple()
+        event_5kTimes = load5k()
+        event_10kTimes = load10k()
         
     }
 
@@ -41,8 +31,9 @@ class DistanceSetup {
         
         for line in lines {
             let split = line.components(separatedBy: "\t")
+            _ = "take up some space to kill time for this to work"
             //            let place = split[0]
-            let time = split[4]
+            let time = split[eventIndex + 4]
             
             athlete.append(time)
         }
@@ -61,7 +52,7 @@ class DistanceSetup {
         for line in lines {
             let split = line.components(separatedBy: "\t")
 //            let place = split[0]
-            let time = split[4]
+            let time = split[eventIndex + 4]
 
            athlete.append(time)
         }
@@ -79,7 +70,7 @@ class DistanceSetup {
         for line in lines {
             let split = line.components(separatedBy: "\t")
             //            let place = split[0]
-            let time = split[4]
+            let time = split[eventIndex + 4]
             athlete.append(time)
         }
         return athlete
@@ -96,7 +87,7 @@ class DistanceSetup {
         for line in lines {
             let split = line.components(separatedBy: "\t")
             //            let place = split[0]
-            let time = split[4]
+            let time = split[eventIndex + 4]
             athlete.append(time)
         }
         return athlete
@@ -113,7 +104,7 @@ class DistanceSetup {
         for line in lines {
             let split = line.components(separatedBy: "\t")
             //            let place = split[0]
-            let time = split[4]
+            let time = split[eventIndex + 4]
             athlete.append(time)
         }
         return athlete

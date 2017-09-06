@@ -10,16 +10,13 @@ import Foundation
 
 class JumpSetup {
     
-    func setup()
+    func eventSetup()
     {
-        men_tripleJumpDistance = loadTripleJump()
-        men_tripleJumpDistance = men_tripleJumpDistance.sorted()
-        men_longJumpDistance = loadLongJump()
-        men_longJumpDistance = men_longJumpDistance.sorted()
-        men_highJumpHeight = loadHighJump()
-        men_highJumpHeight = men_highJumpHeight.sorted()
-        men_poleVaultHeight = loadPoleVault()
-        men_poleVaultHeight = men_poleVaultHeight.sorted()
+        event_tripleJumpDistance = loadTripleJump()
+        event_longJumpDistance = loadLongJump()
+        event_highJumpHeight = loadHighJump()
+        event_poleVaultHeight = loadPoleVault()
+        
     }
     
     func loadTripleJump() -> [String] {
@@ -33,7 +30,7 @@ class JumpSetup {
         for line in lines {
             let split = line.components(separatedBy: "\t")
 //            let place = split[0]
-            let time = split[4]
+            let time = split[eventIndex + 4]
 
            athlete.append(time)
         }
@@ -51,7 +48,7 @@ class JumpSetup {
         for line in lines {
             let split = line.components(separatedBy: "\t")
             //            let place = split[0]
-            let time = split[4]
+            let time = split[eventIndex + 4]
  
             athlete.append(time)
         }
@@ -69,7 +66,7 @@ class JumpSetup {
         for line in lines {
             let split = line.components(separatedBy: "\t")
             //            let place = split[0]
-            let time = split[4]
+            let time = split[eventIndex + 4]
 
             athlete.append(time)
         }
@@ -77,7 +74,7 @@ class JumpSetup {
     }
 
     func loadPoleVault() -> [String] {
-        let csv = Bundle.main.url(forResource: "PoleVaultThrowFirstRound", withExtension: "csv")
+        let csv = Bundle.main.url(forResource: "PoleVaultFirstRound", withExtension: "csv")
         let text = try! String(contentsOf: csv!)
         var lines = text.components(separatedBy: "\r\n")
         lines.remove(at: 95)
@@ -87,7 +84,7 @@ class JumpSetup {
         for line in lines {
             let split = line.components(separatedBy: "\t")
             //            let place = split[0]
-            let time = split[4]
+            let time = split[eventIndex + 4]
 
             athlete.append(time)
         }

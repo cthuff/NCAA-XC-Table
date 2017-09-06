@@ -8,16 +8,16 @@
 
 import Foundation
 
-class RelaySetup {
+class HurdleSetup{
     
     func eventSetup()
     {
-        event_4x100mTimes = load4x100m()
-        event_4x400mTimes = load4x400m()
+        event_110hTimes = load110H()
+        event_400hTimes = load400H()
     }
     
-    func load4x100m() -> [String] {
-        let csv = Bundle.main.url(forResource: "4x100FirstRound", withExtension: "csv")
+    func load110H() -> [String] {
+        let csv = Bundle.main.url(forResource: "110HFirstRound", withExtension: "csv")
         let text = try! String(contentsOf: csv!)
         var lines = text.components(separatedBy: "\r\n")
         lines.remove(at: 95)
@@ -34,8 +34,8 @@ class RelaySetup {
         return athlete
     }
     
-    func load4x400m() -> [String] {
-        let csv = Bundle.main.url(forResource: "4x400FirstRound", withExtension: "csv")
+    func load400H() -> [String] {
+        let csv = Bundle.main.url(forResource: "400HFirstRound", withExtension: "csv")
         let text = try! String(contentsOf: csv!)
         var lines = text.components(separatedBy: "\r\n")
         lines.remove(at: 95)
