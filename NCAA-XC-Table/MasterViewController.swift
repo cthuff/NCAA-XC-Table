@@ -320,7 +320,7 @@ class MasterViewController: UITableViewController, UITextFieldDelegate{
             }
             eventArray = men_poleVaultHeight
         case "Javelin":
-            let csv = Bundle.main.url(forResource: "JevelinFirstRound", withExtension: "csv")
+            let csv = Bundle.main.url(forResource: "JavelinFirstRound", withExtension: "csv")
             let text = try! String(contentsOf: csv!)
             var lines = text.components(separatedBy: "\r\n")
             lines.remove(at: 95)
