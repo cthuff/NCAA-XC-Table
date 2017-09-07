@@ -8,7 +8,7 @@
 
 import Foundation
 
-var eventEventList = ["100 Meters" , "110 Meter Hurdles" , "200 Meters" , "400 Meters" , "400 Meter Hurdles" , "800 Meters" , "1500 Meters" , "3000 Meter Steeplechase" , "5,000 Meters" , "10,000 Meters" , "4x100 Meter Relay" , "4x400 Meter Relay" , "Triple Jump" , "Long Jump" , "High Jump" , "Pole Vault" , "Javelin" , "Shotput" , "Discus" , "Hammer Throw"]
+var eventEventList = ["100 Meters" , "110 Meter Hurdles" , "200 Meters" , "400 Meters" , "400 Meter Hurdles" , "800 Meters" , "1500 Meters" , "3000 Meter Steeplechase" , "5,000 Meters" , "10,000 Meters" , "4x100 Meter Relay" , "4x400 Meter Relay" , "Triple Jump" , "Long Jump" , "High Jump" , "Pole Vault" , "Javelin" , "Shot Put" , "Discus" , "Hammer Throw"]
 
 var eventIndex = 0
 
@@ -67,10 +67,16 @@ class DataManagement {
         _2017.removeAll()
     }
     
-    func sortAndSearchs(eventArray: [String], eventMark: String) -> Int {
+    func sortAndSearchs(eventArray: [String], eventMark: String, reverse: Bool) -> Int {
         var marks: [String] = eventArray
         marks.append(eventMark)
-        marks.sort()
+        if reverse == false {
+            marks.sort()
+            marks.reverse()
+        }
+        else {
+            marks.sort()
+        }
         return marks.index(of: eventMark)!
     }
  

@@ -15,31 +15,13 @@ var seconds = [Int]()
 var miliseconds = [Int]()
 
 class PickerViewConroller: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    
-//    func makeTimer()
-//    {
-//        var x: Int = 0
-//        while x <= 60
-//        {
-//            minutes.append(x)
-//            seconds.append(x)
-//            x = x + 1
-//        }
-//        x = 0
-//        while x <= 100
-//        {
-//            miliseconds.append(x)
-//            x = x + 1
-//        }
-//    }
 
     @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var eventPicker: UIPickerView!
-    @IBOutlet weak var timePicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        makeTimer()
+
         dismissButton.addTarget(self,action: #selector(self.pickerDidFinish),for: .touchUpInside)
         // Do any additional setup after loading the view, typically from a nib.
             }
@@ -61,47 +43,18 @@ class PickerViewConroller: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) ->
         Int{
-//            if (pickerView.tag == 1) {
-//                if component == 0 {
-//                    return minutes.count
-//                }
-//                else if component == 1 {
-//                    return seconds.count
-//                }
-//                else {
-//                    return miliseconds.count
-//                }
-//            }
-//            else {
             return eventEventList.count
             
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) ->
         String? {
-//            if pickerView.tag == 1 {
-//                if component == 0 {
-//                    return "\(minutes[row])"
-//                }
-//                else if component == 1 {
-//                    return "\(seconds[row])"
-//                }
-//                else {
-//                    return "\(miliseconds[row])"
-//                }
-//            }
-//            else if pickerView.tag == 0 {
             return eventEventList[row]
             
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        if pickerView.tag == 0 {
             eventString = eventEventList[row]
-//        }
-//        else if pickerView.tag == 1 {
-//            performanceString = "\(minutes[row])" + ":\(seconds[row])." + "\(miliseconds[row])"
-//        }
-    
+
     }
     
     //MARK: - Dismiss Popover

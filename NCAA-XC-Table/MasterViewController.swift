@@ -96,19 +96,18 @@ class MasterViewController: UITableViewController, UITextFieldDelegate{
         case "100 Meters", "200 Meters" :
             let sprints = SprintSetup.init()
             sprints.eventSetup()
-            
-        case "4x100 Meter Relay", "4x100 Meter Relay":
+        case "110 Meter Hurdles", "400 Meter Hurdles" :
+            let hurdles = HurdleSetup.init()
+            hurdles.eventSetup()
+        case "4x100 Meter Relay", "4x400 Meter Relay":
             let relays = RelaySetup.init()
             relays.eventSetup()
-            
         case "High Jump", "Pole Valut",  "Triple Jump",  "Long Jump":
             let jumps = JumpSetup.init()
             jumps.eventSetup()
-            
-        case "Discus", "Shotput",  "Hammer Throw",  "Javelin":
+        case "Discus", "Shot Put",  "Hammer Throw",  "Javelin":
             let throwers = ThrowSetup.init()
-            throwers.eventSetup()
-            
+            throwers.eventSetup()            
         case "Heptahalon",  "Decathalon":
             break
             //Needs to be implemented later

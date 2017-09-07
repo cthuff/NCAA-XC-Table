@@ -48,7 +48,15 @@ class DetailViewController: UIViewController {
     func configureTopView() {
         // Update the user interface for the detail item.
         let data: DataManagement = DataManagement.init()
-        resultIndex = data.sortAndSearchs(eventArray: eventArray, eventMark: performanceString)
+        var reverse = true
+        switch eventString {
+        case "High Jump", "Pole Valut",  "Triple Jump",  "Long Jump", "Discus", "Shotput",  "Hammer Throw",  "Javelin":
+            reverse = false
+        default:
+            reverse = true
+        }
+        
+        resultIndex = data.sortAndSearchs(eventArray: eventArray, eventMark: performanceString, reverse: reverse)
         if (resultIndex >= 94 ) {
             resultIndex = 94
         }
@@ -294,10 +302,10 @@ class DetailViewController: UIViewController {
             time2.text = event_discusDistance[resultIndex]
             time3.text = event_hammerDistance[resultIndex]
             tableCell4.isHidden = true
-            event1.text = "Shotput"
+            event1.text = "Shot Put"
             event2.text = "Discus"
             event3.text = "Hammer Throw"
-        case "Shotput":
+        case "Shot Put":
             time.text = event_shotputDistance[resultIndex]
             time1.text = event_javelinDistance[resultIndex]
             time2.text = event_discusDistance[resultIndex]

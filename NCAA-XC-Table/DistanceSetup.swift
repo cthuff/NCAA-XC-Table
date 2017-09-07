@@ -20,7 +20,6 @@ class DistanceSetup {
         
     }
 
-    
     func load800() -> [String] {
         let csv = Bundle.main.url(forResource: "800FirstRound", withExtension: "csv")
         let text = try! String(contentsOf: csv!)

@@ -185,21 +185,14 @@
 		4449B5D21F4BE2E000DAB0D1 /* NCAA-XC-Table */ = {
 			isa = PBXGroup;
 			children = (
-				44982AA31F4FB8410030C487 /* AppDelegate.swift */,
 				4430A73E1F5227BF00F5C9DD /* CSV Files */,
-				4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */,
-				4449B5D71F4BE2E000DAB0D1 /* DetailViewController.swift */,
-				44982B201F4FD4E40030C487 /* PickerViewController.swift */,
+				44982AA31F4FB8410030C487 /* AppDelegate.swift */,
 				440B9C731F4D393200515600 /* DataAccessor.swift */,
-				440509441F4E819000518015 /* DistanceSetup.swift */,
-				44284A491F4F958700530730 /* SprintSetup.swift */,
-				44F74AED1F5F6AD2001F0401 /* RelaySetup.swift */,
-				44A956081F5FA6A3009918E5 /* HurdleSetup.swift */,
-				44E5BEBB1F5E540000B95EE9 /* ThrowSetup.swift */,
-				44F74AEB1F5F6973001F0401 /* JumpSetup.swift */,
+				447917631F6201C800C8BA34 /* ViewControllers */,
+				447917651F6201E300C8BA34 /* EventSetup */,
 				4449B5D91F4BE2E000DAB0D1 /* Main.storyboard */,
-				4449B5DC1F4BE2E000DAB0D1 /* Assets.xcassets */,
 				4449B5DE1F4BE2E000DAB0D1 /* LaunchScreen.storyboard */,
+				4449B5DC1F4BE2E000DAB0D1 /* Assets.xcassets */,
 				4449B5E11F4BE2E000DAB0D1 /* Info.plist */,
 			);
 			path = "NCAA-XC-Table";
@@ -221,6 +214,29 @@
 				4449B5F71F4BE2E100DAB0D1 /* Info.plist */,
 			);
 			path = "NCAA-XC-TableUITests";
+			sourceTree = "<group>";
+		};
+		447917631F6201C800C8BA34 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */,
+				4449B5D71F4BE2E000DAB0D1 /* DetailViewController.swift */,
+				44982B201F4FD4E40030C487 /* PickerViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		447917651F6201E300C8BA34 /* EventSetup */ = {
+			isa = PBXGroup;
+			children = (
+				440509441F4E819000518015 /* DistanceSetup.swift */,
+				44284A491F4F958700530730 /* SprintSetup.swift */,
+				44F74AED1F5F6AD2001F0401 /* RelaySetup.swift */,
+				44A956081F5FA6A3009918E5 /* HurdleSetup.swift */,
+				44E5BEBB1F5E540000B95EE9 /* ThrowSetup.swift */,
+				44F74AEB1F5F6973001F0401 /* JumpSetup.swift */,
+			);
+			name = EventSetup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
