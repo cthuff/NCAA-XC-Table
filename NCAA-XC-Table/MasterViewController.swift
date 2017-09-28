@@ -13,6 +13,7 @@ var performanceString: String = ""
 
 class MasterViewController: UITableViewController, UITextFieldDelegate{
 
+    @IBOutlet weak var calculateButton: UIButton!
     
     @IBOutlet weak var eventText: UITextField!
     @IBOutlet weak var performanceText: UITextField!
@@ -34,13 +35,25 @@ class MasterViewController: UITableViewController, UITextFieldDelegate{
         eventText.allowsEditingTextAttributes = false
         
         // Do any additional setup after loading the view, typically from a nib.
-
+        
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        performanceText.delegate = self
         
-        
+        // hides keyboard when tapping
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(MasterViewController.dismissKeyboard)))
+    }
+    //dismisses keyboard upon tap
+    func dismissKeyboard() {
+        performanceText.resignFirstResponder()
+    }
+    
+    // for hitting return
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -49,12 +62,15 @@ class MasterViewController: UITableViewController, UITextFieldDelegate{
         if eventString != "" {
             eventText.text = eventString
             performanceText.isEnabled = true
+            calculateButton.isEnabled = true
             performanceText.text = ""
             eventIndex = 0
         }
         else {
-            performanceText.isEnabled = false
+            
+            calculateButton.isEnabled = false
         }
+        
     }
     
     func dataToLoad() {
