@@ -18,7 +18,6 @@
 		4449B5D61F4BE2E000DAB0D1 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */; };
 		4449B5D81F4BE2E000DAB0D1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5D71F4BE2E000DAB0D1 /* DetailViewController.swift */; };
 		4449B5DB1F4BE2E000DAB0D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4449B5D91F4BE2E000DAB0D1 /* Main.storyboard */; };
-		4449B5DD1F4BE2E000DAB0D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4449B5DC1F4BE2E000DAB0D1 /* Assets.xcassets */; };
 		4449B5E01F4BE2E000DAB0D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4449B5DE1F4BE2E000DAB0D1 /* LaunchScreen.storyboard */; };
 		4449B5EB1F4BE2E100DAB0D1 /* NCAA_XC_TableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5EA1F4BE2E100DAB0D1 /* NCAA_XC_TableTests.swift */; };
 		4449B5F61F4BE2E100DAB0D1 /* NCAA_XC_TableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5F51F4BE2E100DAB0D1 /* NCAA_XC_TableUITests.swift */; };
@@ -76,7 +75,6 @@
 		4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		4449B5D71F4BE2E000DAB0D1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4449B5DA1F4BE2E000DAB0D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4449B5DC1F4BE2E000DAB0D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4449B5DF1F4BE2E000DAB0D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4449B5E11F4BE2E000DAB0D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4449B5E61F4BE2E100DAB0D1 /* NCAA-XC-TableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NCAA-XC-TableTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +83,7 @@
 		4449B5F11F4BE2E100DAB0D1 /* NCAA-XC-TableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NCAA-XC-TableUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4449B5F51F4BE2E100DAB0D1 /* NCAA_XC_TableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCAA_XC_TableUITests.swift; sourceTree = "<group>"; };
 		4449B5F71F4BE2E100DAB0D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		448260341F7E8C9D003829F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44982AA31F4FB8410030C487 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44982B201F4FD4E40030C487 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		44A956081F5FA6A3009918E5 /* HurdleSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HurdleSetup.swift; sourceTree = "<group>"; };
@@ -192,8 +191,8 @@
 				447917651F6201E300C8BA34 /* EventSetup */,
 				4449B5D91F4BE2E000DAB0D1 /* Main.storyboard */,
 				4449B5DE1F4BE2E000DAB0D1 /* LaunchScreen.storyboard */,
-				4449B5DC1F4BE2E000DAB0D1 /* Assets.xcassets */,
 				4449B5E11F4BE2E000DAB0D1 /* Info.plist */,
+				448260341F7E8C9D003829F5 /* Assets.xcassets */,
 			);
 			path = "NCAA-XC-Table";
 			sourceTree = "<group>";
@@ -366,7 +365,6 @@
 				44E5BE9E1F5E4F3600B95EE9 /* 100FirstRound.csv in Resources */,
 				44E5BEA01F5E4F3B00B95EE9 /* 200FirstRound.csv in Resources */,
 				44E5BEA81F5E4F5F00B95EE9 /* HighJumpFirstRound.csv in Resources */,
-				4449B5DD1F4BE2E000DAB0D1 /* Assets.xcassets in Resources */,
 				44E5BEA21F5E4F4300B95EE9 /* 4x400FirstRound.csv in Resources */,
 				44E5BEB21F5E4F9300B95EE9 /* JavelinFirstRound.csv in Resources */,
 				44E5BEAA1F5E4F6700B95EE9 /* TripleJumpFirstRound.csv in Resources */,

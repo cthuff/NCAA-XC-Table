@@ -13,6 +13,7 @@ var performanceString: String = ""
 
 class MasterViewController: UITableViewController, UITextFieldDelegate{
 
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var calculateButton: UIButton!
     
     @IBOutlet weak var eventText: UITextField!
@@ -33,7 +34,7 @@ class MasterViewController: UITableViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         eventText.allowsEditingTextAttributes = false
-        
+        mainView.frame = view.frame
         // Do any additional setup after loading the view, typically from a nib.
         
         if let split = splitViewController {
