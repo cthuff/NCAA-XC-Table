@@ -13,7 +13,6 @@
 		4405094B1F4E97F200518015 /* 1500FirstRound.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4405094A1F4E97F200518015 /* 1500FirstRound.csv */; };
 		440B9C741F4D393200515600 /* DataAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440B9C731F4D393200515600 /* DataAccessor.swift */; };
 		440B9C761F4D483500515600 /* 5kFirstRound.csv in Resources */ = {isa = PBXBuildFile; fileRef = 440B9C751F4D483500515600 /* 5kFirstRound.csv */; };
-		442436A31F4BE9FE001D2EF5 /* Old-Results in Resources */ = {isa = PBXBuildFile; fileRef = 442436A21F4BE9FE001D2EF5 /* Old-Results */; };
 		44284A4A1F4F958700530730 /* SprintSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44284A491F4F958700530730 /* SprintSetup.swift */; };
 		4449B5D61F4BE2E000DAB0D1 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */; };
 		4449B5D81F4BE2E000DAB0D1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5D71F4BE2E000DAB0D1 /* DetailViewController.swift */; };
@@ -69,7 +68,6 @@
 		4405094A1F4E97F200518015 /* 1500FirstRound.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 1500FirstRound.csv; sourceTree = "<group>"; };
 		440B9C731F4D393200515600 /* DataAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccessor.swift; sourceTree = "<group>"; };
 		440B9C751F4D483500515600 /* 5kFirstRound.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 5kFirstRound.csv; sourceTree = "<group>"; };
-		442436A21F4BE9FE001D2EF5 /* Old-Results */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Old-Results"; sourceTree = "<group>"; };
 		44284A491F4F958700530730 /* SprintSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SprintSetup.swift; sourceTree = "<group>"; };
 		4449B5D01F4BE2E000DAB0D1 /* NCAA-XC-Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NCAA-XC-Table.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 				4449B5E91F4BE2E100DAB0D1 /* NCAA-XC-TableTests */,
 				4449B5F41F4BE2E100DAB0D1 /* NCAA-XC-TableUITests */,
 				4449B5D11F4BE2E000DAB0D1 /* Products */,
-				442436A21F4BE9FE001D2EF5 /* Old-Results */,
 			);
 			sourceTree = "<group>";
 		};
@@ -359,7 +356,6 @@
 				440509491F4E97E800518015 /* 10kFirstRound.csv in Resources */,
 				44E5BEAE1F5E4F7400B95EE9 /* PoleVaultFirstRound.csv in Resources */,
 				44E5BEA41F5E4F4B00B95EE9 /* 400HFirstRound.csv in Resources */,
-				442436A31F4BE9FE001D2EF5 /* Old-Results in Resources */,
 				44E5BEB01F5E4F8500B95EE9 /* DiscusFirstRound.csv in Resources */,
 				44E5BE9C1F5E4F2900B95EE9 /* 400FirstRound.csv in Resources */,
 				44E5BE9E1F5E4F3600B95EE9 /* 100FirstRound.csv in Resources */,
