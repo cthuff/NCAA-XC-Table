@@ -17,7 +17,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var tableCell3: UIView!
     @IBOutlet weak var tableCell4: UIView!
     
-
     @IBOutlet weak var event: UITextField!
     @IBOutlet weak var place: UITextField!
     @IBOutlet weak var time: UITextField!
