@@ -370,8 +370,8 @@ class DataManagement {
                 _2014.append(split[eventIndex])
             }
             eventArray = event_hepthalonPoints
-        default:
-            print("Why is this so fucked up?")
+        default: break
+            
         }
     }
     

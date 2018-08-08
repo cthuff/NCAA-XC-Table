@@ -58,13 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NCAA-XC-Table/DetailViewController.swift"
-            timestampString = "528343002.616667"
+            timestampString = "555371927.347293"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "267"
+            endingLineNumber = "267"
+            landmarkName = "jumpEvents()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,13 +74,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NCAA-XC-Table/DetailViewController.swift"
-            timestampString = "528343002.61768"
+            timestampString = "555371927.3473541"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
             endingLineNumber = "60"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "configureTopView()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

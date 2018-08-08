@@ -14,6 +14,7 @@
 		440B9C741F4D393200515600 /* DataAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440B9C731F4D393200515600 /* DataAccessor.swift */; };
 		440B9C761F4D483500515600 /* 5kFirstRound.csv in Resources */ = {isa = PBXBuildFile; fileRef = 440B9C751F4D483500515600 /* 5kFirstRound.csv */; };
 		44284A4A1F4F958700530730 /* SprintSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44284A491F4F958700530730 /* SprintSetup.swift */; };
+		4431A5DA211A3B47007B1F73 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4431A5D9211A3B47007B1F73 /* InfoViewController.swift */; };
 		4449B5D61F4BE2E000DAB0D1 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */; };
 		4449B5D81F4BE2E000DAB0D1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4449B5D71F4BE2E000DAB0D1 /* DetailViewController.swift */; };
 		4449B5DB1F4BE2E000DAB0D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4449B5D91F4BE2E000DAB0D1 /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		440B9C731F4D393200515600 /* DataAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccessor.swift; sourceTree = "<group>"; };
 		440B9C751F4D483500515600 /* 5kFirstRound.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 5kFirstRound.csv; sourceTree = "<group>"; };
 		44284A491F4F958700530730 /* SprintSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SprintSetup.swift; sourceTree = "<group>"; };
+		4431A5D9211A3B47007B1F73 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		4449B5D01F4BE2E000DAB0D1 /* NCAA-XC-Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NCAA-XC-Table.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		4449B5D71F4BE2E000DAB0D1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				4449B5D51F4BE2E000DAB0D1 /* MasterViewController.swift */,
 				4449B5D71F4BE2E000DAB0D1 /* DetailViewController.swift */,
 				44982B201F4FD4E40030C487 /* PickerViewController.swift */,
+				4431A5D9211A3B47007B1F73 /* InfoViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				44F74AEC1F5F6973001F0401 /* JumpSetup.swift in Sources */,
 				44982B211F4FD4E40030C487 /* PickerViewController.swift in Sources */,
 				44E5BEBC1F5E540000B95EE9 /* ThrowSetup.swift in Sources */,
+				4431A5DA211A3B47007B1F73 /* InfoViewController.swift in Sources */,
 				440509451F4E819000518015 /* DistanceSetup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,7 +572,7 @@
 				DEVELOPMENT_TEAM = DQWUV4LY29;
 				INFOPLIST_FILE = "NCAA-XC-Table/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.RDComputing.NCAA-XC-Table";
+				PRODUCT_BUNDLE_IDENTIFIER = com.craighuff.TrackConnect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -581,7 +585,7 @@
 				DEVELOPMENT_TEAM = DQWUV4LY29;
 				INFOPLIST_FILE = "NCAA-XC-Table/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.RDComputing.NCAA-XC-Table";
+				PRODUCT_BUNDLE_IDENTIFIER = com.craighuff.TrackConnect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

@@ -89,7 +89,6 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -169,7 +168,7 @@ class DetailViewController: UIViewController {
             event3.text = "3000 Meter Steeplechase"
             event4.text = "5,000 Meters"
         default:
-            print("something's wrong")
+            break
         }
     }
     
@@ -206,7 +205,7 @@ class DetailViewController: UIViewController {
             event2.text = "200 Meters"
             event3.text = "800 Meters"
         default:
-            print("something's wrong")
+            break
         }
 
     }
@@ -233,7 +232,7 @@ class DetailViewController: UIViewController {
             tableCell4.isHidden = true
             event1.text = "4x100 Meter Relay"
         default:
-            print("something's wrong")
+            break
         }
         
     }
@@ -283,7 +282,7 @@ class DetailViewController: UIViewController {
             event2.text = "Long Jump"
             event3.text = "Triple Jump"
         default:
-            print("something's wrong")
+            break
         }
         
     }
@@ -333,7 +332,7 @@ class DetailViewController: UIViewController {
             event2.text = "Shotput"
             event3.text = "Discus"
         default:
-            print("something's wrong")
+            break
         }
         
     }
@@ -356,7 +355,7 @@ class DetailViewController: UIViewController {
             tableCell3.isHidden = true
             tableCell4.isHidden = true
         default:
-            print("something's wrong")
+            break
         }
     
     }

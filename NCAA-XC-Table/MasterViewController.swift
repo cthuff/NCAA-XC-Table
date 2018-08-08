@@ -27,6 +27,15 @@ class MasterViewController: UITableViewController, UITextFieldDelegate{
         self.performSegue(withIdentifier: "Popover", sender: self)
     }
     
+    @IBAction func regionToggle(_ sender: Any) {
+        if(divisionSelect.selectedSegmentIndex == 0) {
+            regionSelect.isHidden = false
+        } else {
+            regionSelect.selectedSegmentIndex = 0
+            regionSelect.isHidden = true
+        }
+    }
+    
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
 
@@ -88,7 +97,6 @@ class MasterViewController: UITableViewController, UITextFieldDelegate{
         {
             eventIndex += 15
         }
-        print(eventIndex)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
